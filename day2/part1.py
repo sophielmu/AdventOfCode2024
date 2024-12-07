@@ -8,9 +8,7 @@ if __name__ == "__main__":
 
             for i in range(1, len(report)):
                 difference = report[i - 1] - report[i]
-                if abs(difference) > 3:
-                    break
-                if difference == 0:
+                if abs(difference) > 3 or difference == 0:
                     break
 
                 if report[i] > report[i - 1]:

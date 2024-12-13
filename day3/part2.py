@@ -8,6 +8,7 @@ if __name__ == "__main__":
     with open("day3/input.txt", "r") as f:
         input_text = "do()" + f.read()
         input_text = input_text + "don't()"
+        input_text = input_text.strip().replace('\n', '')
         do_dont_strings = re.findall("do\(\).+?(?=don't\(\))", input_text)
 
         for string in do_dont_strings:
